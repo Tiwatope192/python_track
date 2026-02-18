@@ -1,0 +1,159 @@
+#in this week i will working on conditional statements, IF,ELIF,ELSE
+score = 90
+if score >= 100:
+    print("A")
+         #the condition is fufilled because, score is greater than 30, output A was printed
+
+score = 90
+if score >= 100:
+    print("A")
+            #the condition was not fufilled as score is not equal to or > 100, no output
+
+score = 90
+if score >= 100:
+    print("A")
+else:
+    print("F")
+            #condition was not fufilled ,so python is going to print F instead of no output
+            #else comes after if
+
+#elif statement asks a follow up question , if previous statements were not true, #it has to come in btw if and else
+score = 100
+if score >= 90:
+    print("A")   #......condition1
+elif score >=80:
+    print("B")    #.....condition2
+else:
+    print("F")     #.....condition3
+                #condition 1 is fufilled automatically, so output is A, condition 2 and 3 are ignored
+
+score = 85
+if score >= 90:
+    print("A")   #......condition1
+elif score >=80:
+    print("B")    #.....condition2
+else:
+    print("F")     #.....condition3
+                #condition 2 is fufilled,so output is B condition 1 and 3 are ignored
+
+score = 5
+if score >= 90:
+    print("A")   #......condition1
+elif score >=80:
+    print("B")    #.....condition2
+else:
+    print("F")     #.....condition3
+                #condition 3 is fufilled,so output is F condition 1 and 2 are ignored               
+
+#branching statements, using elif multiple times
+score = 75
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")
+                #only condition 3 is fufilled, so output is C, 1,2,4 are ignored
+
+#nested if  statements
+score = 95
+submitted_project = True
+if score >= 90:
+    if submitted_project:
+        print("A+")
+                    #all conditions were fufilled so output is A+
+
+#nested if  statements
+score = 50
+submitted_project = False
+if score >= 90:
+    if submitted_project:
+        print("A+")   #....indentation is 8 spaces 
+    else:
+        print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")
+                #no condition is met, as all score were more than 50, so ouput is F
+
+#logical operators and, or
+score = 100
+submitted_project = False
+if score >= 90 and submitted_project:
+    print("A+")   
+elif score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")
+                # this uses the operator "and" to combine conditions instead of multiple ifs and else
+                # two of the stated conditions must be true to print the output after or else it jumps to others
+                #score is more than 90 (true) but submitted assignment is false, hence A id output instead of A+
+
+#logical operators and, or, mutliples questions can be asked at the samre time using this
+score = 100
+submitted_project = True
+if score >= 90 and submitted_project:
+    print("A+")   
+elif score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")
+                #the two stated condition is true, hence A+ is output, ignoring the other statemets
+
+score = 65
+submitted_project = True
+if score >= 90 and submitted_project:
+    print("A+")   
+elif score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 50 or submitted_project:
+    print("C")
+else:
+    print("F")
+                # the or operator ensures that after the "and", if conditions are met, it prints the output
+                #here, even though the score is less than 65, because assignmemt was submitted it prints C
+
+
+#independent ifs are separated checks, testing all conditions even if one is already met
+score = 50
+submitted_project = True
+if score >= 90:
+    print("high score")
+else:
+    print("low score")
+if submitted_project:
+    print("project is submitted")
+else:
+    print("project is not submitted")
+                #here, even though the score is less than 90 and low score should be output, it goes to check the other conditions to satisfy the condition that false which prints project is not submitted
+    
+#baraa's challenge 1
+#validate the quality and correctness of email values
+#must not be empty
+#must contain '.' and '@'
+#must contain exactly one '@' symbol
+#must end with '.com'
+#must not be longer than 254 characters
+#must start and end with a letter or digit
+
+email = "  "  #email must not be empty
+email = email.strip()  #clean the spaces in the email string
+if email == "":
+    print("email cannot be empty.")
+else:
+    print("email is valid")
