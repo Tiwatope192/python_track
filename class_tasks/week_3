@@ -1,0 +1,37 @@
+#nested loop A nested loop means a loop inside another loop.
+#Each time the outer loop runs once, the inner loop runs completely.
+#it can be used to see all posiible data combinatiom
+#the outer loop is slower e.g a
+#medium loop is medium e.g b
+#inner loop is faster and runs through the other loop e.g 
+#using nested loops for crossing data
+for x in range(3): #outer loop
+    for y in range(2): #inner loop
+        for z in range(2):
+            print(f"({x}, {y}, {z}")
+
+#producing a product catalogue pairing colours and sizes
+colors = ['red', 'blue', 'green']
+sizes = ['L', 'M', 'S']
+for color in colors:
+    for size in sizes:
+        print(f'{color} - size {size}')
+
+#for navigating hierachy
+#creating a report for march and april for year 2026, 2027 and days
+years = [2026, 2027]
+months = ['march', 'april']
+days = range(1, 29)
+for y in years:
+    for m in months:
+       for d in days:
+               print(f'report_{y}_{m}_{d}").csv')
+
+#select count(*) from customers where id is NULL;
+# to localise and automate within a large table where nulls are presence
+tables = ['customers', 'orders', 'products', 'prices']
+columns = ['id', 'create_date']
+for t in tables:
+    for c in columns:
+        print(f'select count(*) from {t} where {c} is NULL:')
+           

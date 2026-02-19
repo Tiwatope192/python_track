@@ -1,4 +1,20 @@
+#
+# Task 1: Write a simple python code, that takes the name of a person as an input, then it greets the person
+
+name = input("enter your name:")
+greetings = "hope you are fine today."
+print("hello", name, greetings)
+
+# Task 2:Write a simple code that takes the name of a person as an input, takes age, welcome the person and their age plus 20
+name = input("enter your name:")
+age = int(input("enter your age:"))
+new_age = age + 20
+greetings = "hope you are fine, in 20 years you will be"
+print(name, greetings, new_age )
+
 #Week_2
+
+#Task 1
 # grade = input("enter your grade:")
 grade = 1.5
 grade = float(grade)
