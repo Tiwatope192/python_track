@@ -59,7 +59,11 @@ for sales in sales:
         category = 'medium'
 else:
     category = 'high'
-        
+     categories[category] ["count"] += 1
+    categories [category] ["sum"] += sales
+for name, data in categories. items():
+
+
         
 
 
