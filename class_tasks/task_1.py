@@ -48,6 +48,18 @@ for integers in range(1, 101):
     else:
         print(integers)
 
+sales = [120, 450, 300, 50, 800, 200]
+#sales < 300 = low
+#sales btwn 300 to 700 = medium
+for sales in sales:
+    if sales <= 300:
+        category = 'low'
+    elif sale <= 700:
+        category = 'medium'
+else:
+    category = 'high'
+        
+        
 
 
 
